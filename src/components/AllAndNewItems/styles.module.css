@@ -1,0 +1,14 @@
+.btnsFunctions {
+    display: flex;
+    gap: 1rem;
+}
+.btnsFunctions p {
+    padding: 1rem;
+}
+.btnsFunctions a {
+    text-decoration: none;
+}
+.btnsFunctions p:hover {
+    background-color: #fff;
+    color: #000;
+}

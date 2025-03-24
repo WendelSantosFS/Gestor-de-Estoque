@@ -1,0 +1,180 @@
+:root {
+    --bg-itens: #2c2a2a;
+}
+
+.rootContent {
+    margin: 1rem;
+}
+
+.earlyInfoStock {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.earlyInfoStock h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+.earlyInfoStock p {
+    font-weight: bold;
+}
+
+.childInfoStock1, .childInfoStock2, .childInfoStock3, .childInfoStock4 {
+    background-color: var(--bg-itens);
+    width: 20%;
+    padding: 1rem;
+}
+
+.mainSummary {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.betweenSummary {
+    width: 100%;
+}
+.childSummary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c2a2a;
+    padding: 1rem;
+    padding-right: 8rem;
+}
+
+.renderElements {
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 0 7px 1rem;
+}
+.renderElements button {
+    padding: 0 1rem;
+    height: 30px;
+    margin-right: 7.7rem;
+    color: #000;
+}
+.renderParagraphName {
+    width: 200px;
+}
+.renderParagraphQtd {
+    width: 100px;
+}
+
+
+
+.onActive {
+    border-bottom: 2px solid #fff;
+}
+
+
+.infoProductsAll {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-itens);
+    padding: 1rem;
+}
+.infoId {
+    flex-basis: 400px;
+}
+.infoName {
+    flex-basis: 250px;
+}
+.infoInStock {
+    flex-basis: 200px;
+}
+.infoCategory {
+    flex-basis: 200px;
+}
+.infoAction {
+    flex-basis: 300px;
+}
+
+.renderInStock {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.renderBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+}
+.renderBtns button {
+    color: #000;
+    height: 30px;
+    padding: 0 1rem;
+    border: none;
+    border-radius: .25rem;
+}
+.renderBtns button:hover {
+    border: 2px solid #fff;
+}
+.renderId {
+    flex-basis: 390px;
+}
+.renderName {
+    flex-basis: 250px;
+}
+.renderInStock {
+    flex-basis: 200px;
+}
+.renderCategory {
+    flex-basis: 200px;
+}
+.renderAction {
+    flex-basis: 300px;
+}
+
+.viewItem {
+    background-color: rgb(92, 92, 206);
+    cursor: pointer;
+}
+.updateItem {
+    background-color: #dacccc;
+    cursor: pointer;
+}
+.deleteItem {
+    background-color: rgb(189, 33, 33);
+    cursor: pointer;
+}
+
+
+.nameAndBtns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+.btnsItemStock {
+    display: flex;
+    gap: .5rem;
+}
+.btnsItemStock button {
+    color: #000;
+    height: 30px;
+    border: 0;
+    padding: 0 1rem;
+    border-radius: .25rem;
+}
+.btnsItemStock button:hover {
+    border: 2px solid white;
+}
+.btnUpdateItem {
+    background-color: #dacccc;
+}
+.btnDeleteItem {
+    background-color: rgb(189, 33, 33)
+}
+
+.blockInfo, .createAndUpdateInfo {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+.blockInfo p {
+    background-color: #2c2a2a;
+    padding: 1rem;
+    border-radius: .25rem;
+    box-shadow: 2px 2px 5px black;
+}

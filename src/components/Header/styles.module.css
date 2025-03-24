@@ -1,0 +1,19 @@
+.styleHeader {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.styleHeader nav {
+    display: flex;
+    gap: .7rem;
+}
+.styleHeader a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: .3rem;
+    background-color: rgb(110, 107, 107);
+    border-radius: 5px;
+}
