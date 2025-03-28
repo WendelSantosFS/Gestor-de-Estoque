@@ -3,12 +3,15 @@ import stylesPages from './stylesPages.module.css'
 import ListProduct from "../contexts/ListProduct"
 import { Link, useParams } from "react-router-dom"
 import AllAndNewItems from "../components/AllAndNewItems"
+import useStock from "../hooks/useStock"
 
 
 export default function ItemStock () {
     const { itemID } = useParams()
     const {arrayProducts, setArrayProducts} = useContext(ListProduct)
     const itemInStock = arrayProducts.find( (item) => item.id === +itemID )
+
+    const { removeProduct } = useStock(arrayProducts, setArrayProducts)
 
     if (!itemInStock) {
         return <div>
@@ -19,12 +22,7 @@ export default function ItemStock () {
         </div>
     }
 
-    const removeProduct = (id) => {
-        const updateArray = arrayProducts.filter( (product) => product.id !== id)
-        setArrayProducts(updateArray)
-        
-        localStorage.setItem('gestor-estoque', JSON.stringify(updateArray))
-    }
+   
 
     return (
         <div>

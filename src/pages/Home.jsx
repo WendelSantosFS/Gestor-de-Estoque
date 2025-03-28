@@ -2,26 +2,13 @@ import { useContext } from "react"
 import ListProduct from "../contexts/ListProduct"
 import stylesPages from './stylesPages.module.css'
 import { Link } from "react-router-dom"
+import useStock from "../hooks/useStock"
 
 export default function Home () {
     const {arrayProducts, setArrayProducts} = useContext(ListProduct)
     let arrayRenderResults = arrayProducts.filter( (product) => product.quantity < 10 )
 
-    const itensRecentes = () => {
-        const dayToday = new Date()
-        const dayBefore = new Date()
-        dayBefore.setDate( dayToday.getDate() - 10)
-        
-        const itensRecentes = []
-        
-        arrayProducts.forEach( (data) => {
-            if (data.day >= dayBefore.toLocaleDateString()) {
-                itensRecentes.push(data)
-            }
-        } )
-
-        return itensRecentes.length
-    }
+    const { recentItems } = useStock(arrayProducts)
 
     return (
         <>
@@ -41,7 +28,7 @@ export default function Home () {
 
                 <div className={stylesPages.childInfoStock3}>
                     <p>Itens recentes</p>
-                    <h2>{ itensRecentes()}</h2>
+                    <h2>{ recentItems() }</h2>
                 </div>
 
                 <div className={stylesPages.childInfoStock4}>
@@ -95,9 +82,3 @@ export default function Home () {
         </>
     )
 }
-
-/*
-
-
-
-*/

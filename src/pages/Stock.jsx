@@ -3,16 +3,12 @@ import ListProduct from '../contexts/ListProduct'
 import stylesPages from './stylesPages.module.css'
 import { Link } from 'react-router-dom'
 import AllAndNewItems from '../components/AllAndNewItems'
+import useStock from '../hooks/useStock'
 
 export default function Stock () {
     const {arrayProducts, setArrayProducts} = useContext(ListProduct)
 
-    const removeProduct = (id) => {
-        const updateArray = arrayProducts.filter( (product) => product.id !== id)
-        setArrayProducts(updateArray)
-        
-        localStorage.setItem('gestor-estoque', JSON.stringify(updateArray))
-    }
+    const { removeProduct } = useStock(arrayProducts, setArrayProducts)
 
     return (
         <>
