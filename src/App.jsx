@@ -17,7 +17,7 @@ export default function App() {
 // adsf
   return (
     <ListProduct.Provider value={{arrayProducts, setArrayProducts}}>
-       <BrowserRouter>
+       <BrowserRouter basename="/Gestor-de-Estoque/">
             <Routes>
                 <Route path="/" element={<LayoutRoot />} >
                   <Route index element={<Home />} />
