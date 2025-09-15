@@ -8,7 +8,7 @@ import NewItem from "./components/NewItem";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/Gestor-de-Estoque/",
         element: <LayoutRoot />,
         children: [
             {
