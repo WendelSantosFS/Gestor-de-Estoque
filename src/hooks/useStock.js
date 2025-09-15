@@ -1,5 +1,5 @@
 export default function useStock (array, setArray) {
-    const chave = 'gestor-estoque'
+    const keyLocalStorage = 'gestor-estoque'
   
     function recentItems () {
         const dayToday = new Date()
@@ -21,7 +21,7 @@ export default function useStock (array, setArray) {
         const updateArray = array.filter( (product) => product.id !== id)
         setArray(updateArray)
         
-        localStorage.setItem(chave, JSON.stringify(updateArray))
+        localStorage.setItem(keyLocalStorage, JSON.stringify(updateArray))
     }
 
     return  { recentItems, removeProduct }
