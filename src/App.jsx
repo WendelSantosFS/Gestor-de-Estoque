@@ -14,7 +14,7 @@ export default function App() {
     const varCurrent = localStorage.getItem('gestor-estoque')
     return varCurrent ? JSON.parse(varCurrent) : []
   } )
-
+// adsf
   return (
     <ListProduct.Provider value={{arrayProducts, setArrayProducts}}>
        <BrowserRouter>
